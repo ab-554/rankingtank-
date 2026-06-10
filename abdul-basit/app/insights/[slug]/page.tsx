@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import RevealWrapper from '@/components/ui/RevealWrapper';
-import { getInsight, getAllInsightSlugs, getRelatedInsights } from '@/lib/sanity/queries';
+import { getInsight, getAllInsightSlugs, getRelatedInsights } from '@/lib/data';
 import { formatDate } from '@/lib/utils';
 
 export const revalidate = 3600;
@@ -183,7 +183,7 @@ export default async function InsightDetailPage({ params }: { params: Promise<{ 
             {related.map((r, i) => (
               <RevealWrapper key={r._id} delay={(['d1', 'd2', 'd3'] as const)[i]}>
                 <Link
-                  href={`/insights/${r.slug.current}`}
+                  href={`/insights/${r.slug}`}
                   className="block rounded-[20px] p-6 no-underline transition-all duration-300 hover:-translate-y-2"
                   style={{ background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--white)' }}
                 >

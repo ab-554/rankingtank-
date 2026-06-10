@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060d"/>
+      <stop offset="100%" stop-color="#0c1020"/>
+    </linearGradient>
+    <linearGradient id="glow-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56,152,255,.12)"/>
+      <stop offset="100%" stop-color="rgba(56,152,255,0)"/>
+    </linearGradient>
+    <linearGradient id="glow-cyan" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0,224,255,.08)"/>
+      <stop offset="100%" stop-color="rgba(0,224,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="100" r="350" fill="url(#glow-blue)"/>
+  <circle cx="1000" cy="500" r="300" fill="url(#glow-cyan)"/>
+  <!-- Grid dots -->
+  <g fill="rgba(56,152,255,.04)" transform="translate(40,40)">
+    <circle cx="0" cy="0" r="1.5"/><circle cx="80" cy="0" r="1.5"/><circle cx="160" cy="0" r="1.5"/>
+    <circle cx="240" cy="0" r="1.5"/><circle cx="320" cy="0" r="1.5"/><circle cx="400" cy="0" r="1.5"/>
+    <circle cx="0" cy="80" r="1.5"/><circle cx="80" cy="80" r="1.5"/><circle cx="160" cy="80" r="1.5"/>
+    <circle cx="0" cy="160" r="1.5"/><circle cx="80" cy="160" r="1.5"/><circle cx="0" cy="240" r="1.5"/>
+  </g>
+  <!-- Name -->
+  <text x="200" y="280" font-family="'Bebas Neue',sans-serif" font-size="120" fill="#edf3ff" font-weight="400" letter-spacing="3">ABDUL BASIT A.</text>
+  <!-- Tagline -->
+  <text x="200" y="340" font-family="'Syne',sans-serif" font-size="32" fill="#8b9ab5" font-weight="400" letter-spacing="1">Web Systems · Precision SEO</text>
+  <!-- Pill badges -->
+  <rect x="200" y="380" width="130" height="32" rx="16" fill="rgba(56,152,255,.10)" stroke="rgba(56,152,255,.2)" stroke-width="1"/>
+  <text x="265" y="401" font-family="'Outfit',sans-serif" font-size="12" fill="#3898ff" text-anchor="middle" font-weight="600" letter-spacing="1.5">NEXT.JS</text>
+  <rect x="345" y="380" width="140" height="32" rx="16" fill="rgba(0,224,255,.08)" stroke="rgba(0,224,255,.2)" stroke-width="1"/>
+  <text x="415" y="401" font-family="'Outfit',sans-serif" font-size="12" fill="#00e0ff" text-anchor="middle" font-weight="600" letter-spacing="1.5">SANITY CMS</text>
+  <rect x="498" y="380" width="120" height="32" rx="16" fill="rgba(56,152,255,.10)" stroke="rgba(56,152,255,.2)" stroke-width="1"/>
+  <text x="558" y="401" font-family="'Outfit',sans-serif" font-size="12" fill="#3898ff" text-anchor="middle" font-weight="600" letter-spacing="1.5">SEO</text>
+  <!-- Portfolio URL -->
+  <text x="200" y="470" font-family="'Outfit',sans-serif" font-size="16" fill="#445060" font-weight="300" letter-spacing="3">RANKINGTANK.COM</text>
+  <!-- Decorative line -->
+  <line x1="200" y1="435" x2="350" y2="435" stroke="rgba(56,152,255,.15)" stroke-width="1.5"/>
+</svg>

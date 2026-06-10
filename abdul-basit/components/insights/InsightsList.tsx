@@ -5,7 +5,7 @@ import Link from 'next/link';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { formatDate } from '@/lib/utils';
-import type { Insight } from '@/lib/types';
+import type { Insight } from '@/lib/data';
 
 const categories = ['All', 'SEO', 'Web Systems', 'AI & Automation', 'Performance', 'Case Study'];
 
@@ -49,7 +49,7 @@ export default function InsightsList({ insights }: { insights: Insight[] }) {
       {featured && activeCategory === 'All' && (
         <RevealWrapper className="mb-12">
           <Link
-            href={`/insights/${featured.slug.current}`}
+            href={`/insights/${featured.slug}`}
             className="block rounded-[24px] overflow-hidden no-underline transition-all duration-350 group hover:-translate-y-2"
             style={{ background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--white)' }}
           >
@@ -84,7 +84,7 @@ export default function InsightsList({ insights }: { insights: Insight[] }) {
         {visible.map((insight, i) => (
           <RevealWrapper key={insight._id} delay={(['d1', 'd2', 'd3'] as const)[i % 3]}>
             <Link
-              href={`/insights/${insight.slug.current}`}
+              href={`/insights/${insight.slug}`}
               className="block rounded-[20px] overflow-hidden no-underline transition-all duration-350 group hover:-translate-y-2 h-full"
               style={{ background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--white)' }}
             >

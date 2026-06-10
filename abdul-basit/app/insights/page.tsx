@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import InsightsList from '@/components/insights/InsightsList';
-import { getInsights } from '@/lib/sanity/queries';
+import { getInsights } from '@/lib/data';
 
 export const revalidate = 60;
 

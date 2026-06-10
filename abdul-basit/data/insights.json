@@ -1,0 +1,39 @@
+[
+  {
+    "_id": "i1", "title": "Why Technical SEO Is the Foundation of Every Growth Strategy",
+    "slug": "technical-seo-foundation-growth", "category": "SEO",
+    "excerpt": "Most businesses focus on content and links. But without a solid technical foundation, you're building on sand. Here's how to fix that.",
+    "publishedAt": "2026-03-15", "readTime": 8, "author": "Abdul Basit A.", "tags": ["SEO", "Strategy"],
+    "featured": true
+  },
+  {
+    "_id": "i2", "title": "Building Scalable Web Systems with Next.js 15",
+    "slug": "scalable-web-systems-nextjs-15", "category": "Web Systems",
+    "excerpt": "The App Router changed everything. Here's our architecture for building enterprise-grade applications that scale.",
+    "publishedAt": "2026-03-08", "readTime": 12, "author": "Abdul Basit A.", "tags": ["Next.js", "Architecture"]
+  },
+  {
+    "_id": "i3", "title": "AI Agents in Production: What We Learned After 6 Months",
+    "slug": "ai-agents-production-learnings", "category": "AI & Automation",
+    "excerpt": "We deployed AI agents across 3 client projects. The results surprised us — and here's what we'd do differently.",
+    "publishedAt": "2026-02-22", "readTime": 10, "author": "Abdul Basit A.", "tags": ["AI", "Automation"]
+  },
+  {
+    "_id": "i4", "title": "Core Web Vitals: The Metrics That Actually Matter in 2026",
+    "slug": "core-web-vitals-2026", "category": "Performance",
+    "excerpt": "Google keeps updating what matters. We break down INP, CLS, and LCP strategies that move the needle.",
+    "publishedAt": "2026-02-10", "readTime": 7, "author": "Abdul Basit A.", "tags": ["Performance", "SEO"]
+  },
+  {
+    "_id": "i5", "title": "Case Study: How We Grew Organic Traffic by 340% for Urban Creative",
+    "slug": "case-study-urban-creative-seo", "category": "Case Study",
+    "excerpt": "A deep dive into our 18-month SEO transformation for a retail brand — from audit to dominance.",
+    "publishedAt": "2026-01-28", "readTime": 15, "author": "Abdul Basit A.", "tags": ["Case Study", "SEO"]
+  },
+  {
+    "_id": "i6", "title": "The n8n Automation Stack We Use for Every Client",
+    "slug": "n8n-automation-stack-clients", "category": "AI & Automation",
+    "excerpt": "Our battle-tested automation workflows that save 20+ hours per week across client projects.",
+    "publishedAt": "2026-01-15", "readTime": 9, "author": "Abdul Basit A.", "tags": ["Automation", "n8n"]
+  }
+]

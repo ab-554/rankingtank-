@@ -4,7 +4,7 @@ import Link from 'next/link';
 import PageHero from '@/components/ui/PageHero';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import CtaBanner from '@/components/ui/CtaBanner';
-import { getProject, getAllProjectSlugs, getRelatedProjects } from '@/lib/sanity/queries';
+import { getProject, getAllProjectSlugs, getRelatedProjects } from '@/lib/data';
 
 export const revalidate = 3600;
 
@@ -128,7 +128,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             {related.map((p, i) => (
               <RevealWrapper key={p._id} delay={(['d1', 'd2', 'd3'] as const)[i]}>
                 <Link
-                  href={`/projects/${p.slug.current}`}
+                  href={`/projects/${p.slug}`}
                   className="block rounded-[20px] overflow-hidden no-underline transition-all duration-350 group hover:-translate-y-2"
                   style={{ background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--white)' }}
                 >

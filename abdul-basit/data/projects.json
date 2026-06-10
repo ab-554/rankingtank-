@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "1", "title": "Wristler", "slug": "wristler",
+    "tags": ["E-Commerce", "Platforms"], "client": "Wristler B.V.",
+    "description": "Watch trading marketplace with advanced filtering and secure transactions.",
+    "gradient": "linear-gradient(135deg,#040d26,#0b2248)", "monogram": "W",
+    "thumbnail": "/thumbnails/wristler.svg",
+    "challenge": "Build a trustworthy marketplace for luxury watch trading with real-time authentication.",
+    "solution": "Custom-built Next.js platform with integrated payment processing, AI-powered authenticity verification, and real-time bidding.",
+    "deliverables": ["Next.js Platform", "Payment Integration", "AI Authentication", "Admin Dashboard"],
+    "metrics": [{"label": "Listings at Launch", "value": "5,500+"}, {"label": "Conversion Rate", "value": "4.2%"}, {"label": "Load Time", "value": "1.2s"}],
+    "result": "+5,500 listings at launch"
+  },
+  {
+    "_id": "2", "title": "Urban Creative", "slug": "urban-creative",
+    "tags": ["Websites", "Retail"], "client": "Urban Creative",
+    "description": "Full digital partnership for a retail brand.",
+    "gradient": "linear-gradient(135deg,#050d16,#0e1c2e)", "monogram": "UC",
+    "thumbnail": "/thumbnails/urban-creative.svg",
+    "challenge": "Transform a traditional retail brand into a digital-first experience.",
+    "solution": "End-to-end digital transformation including e-commerce, branding, and performance marketing.",
+    "deliverables": ["E-Commerce Platform", "Brand Identity", "SEO Strategy", "Social Media"],
+    "metrics": [{"label": "Revenue Growth", "value": "+180%"}, {"label": "Online Sales", "value": "€2.4M"}, {"label": "Organic Traffic", "value": "+340%"}],
+    "result": "Long-term growth partner"
+  },
+  {
+    "_id": "3", "title": "So Syncd", "slug": "so-syncd",
+    "tags": ["Branding", "SaaS"], "client": "So Syncd Ltd.",
+    "description": "Design dating platform with personality-based matching.",
+    "gradient": "linear-gradient(135deg,#080416,#120a26)", "monogram": "SS",
+    "thumbnail": "/thumbnails/so-syncd.svg",
+    "challenge": "Create a dating app that stands out in a saturated market through personality science.",
+    "solution": "Research-backed UX design combining MBTI personality matching with modern SwiftUI and React Native interfaces.",
+    "deliverables": ["Brand Identity", "UX/UI Design", "React Native App", "Marketing Website"],
+    "metrics": [{"label": "App Downloads", "value": "500K+"}, {"label": "User Rating", "value": "4.7★"}, {"label": "Countries", "value": "12"}],
+    "result": "International SaaS launch"
+  },
+  {
+    "_id": "4", "title": "Scooperz", "slug": "scooperz",
+    "tags": ["Websites", "Business Services"], "client": "Scooperz",
+    "description": "Social & influencer marketing platform.",
+    "gradient": "linear-gradient(135deg,#04100d,#091e18)", "monogram": "SC",
+    "thumbnail": "/thumbnails/scooperz.svg",
+    "challenge": "Build a platform connecting brands with micro-influencers at scale.",
+    "solution": "Custom CMS-driven platform with influencer matching algorithms and campaign management tools.",
+    "deliverables": ["Platform Development", "Influencer Matching", "Analytics Dashboard", "Campaign Tools"],
+    "metrics": [{"label": "Campaigns Managed", "value": "200+"}, {"label": "Influencer Network", "value": "15K+"}, {"label": "Client Satisfaction", "value": "98%"}],
+    "result": "Award-winning design"
+  },
+  {
+    "_id": "5", "title": "Koppert Cress", "slug": "koppert-cress",
+    "tags": ["SEO", "Strategy"], "client": "Koppert Cress",
+    "description": "Strategic client journey optimization.",
+    "gradient": "linear-gradient(135deg,#120a26,#080416)", "monogram": "KC",
+    "thumbnail": "/thumbnails/koppert-cress.svg",
+    "challenge": "Increase organic visibility for a B2B horticultural brand in competitive international markets.",
+    "solution": "Technical SEO audit, content strategy overhaul, and international link building campaign.",
+    "deliverables": ["SEO Audit", "Content Strategy", "Link Building", "Analytics Setup"],
+    "metrics": [{"label": "Organic Traffic", "value": "+30%"}, {"label": "Rankings Improved", "value": "150+"}, {"label": "Domain Authority", "value": "+12"}],
+    "result": "+30% sustainable traffic"
+  },
+  {
+    "_id": "6", "title": "HBC", "slug": "hbc",
+    "tags": ["Automation", "Web Application"], "client": "HBC Group",
+    "description": "Corporate website & product configurator.",
+    "gradient": "linear-gradient(135deg,#0e1c2e,#050d16)", "monogram": "HB",
+    "thumbnail": "/thumbnails/hbc.svg",
+    "challenge": "Replace manual quoting process with an automated product configurator saving hours weekly.",
+    "solution": "Next.js web application with a dynamic product configurator, PDF generation, and CRM integration.",
+    "deliverables": ["Corporate Website", "Product Configurator", "PDF Generation", "CRM Integration"],
+    "metrics": [{"label": "Hours Saved/Month", "value": "40+"}, {"label": "Quote Accuracy", "value": "99.2%"}, {"label": "Lead Response Time", "value": "-65%"}],
+    "result": "Saved 40 hrs/month"
+  }
+]

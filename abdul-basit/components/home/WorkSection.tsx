@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Eyebrow from '@/components/ui/Eyebrow';
 import RevealWrapper from '@/components/ui/RevealWrapper';
-import { fallbackProjects } from '@/lib/sanity/queries';
+import { getAllProjects } from '@/lib/data';
 
 export default function WorkSection() {
-  const projects = fallbackProjects.slice(0, 4);
+  const projects = getAllProjects().slice(0, 4);
 
   return (
     <div className="py-[120px] px-[60px] max-lg:px-6">
@@ -25,7 +25,7 @@ export default function WorkSection() {
         {projects.map((project, i) => (
           <RevealWrapper key={project._id} delay={(['d1', 'd2', 'd3', 'd4'] as const)[i]}>
             <Link
-              href={`/projects/${project.slug.current}`}
+              href={`/projects/${project.slug}`}
               className="block rounded-[20px] overflow-hidden no-underline relative transition-all duration-350 group hover:-translate-y-2"
               style={{
                 background: 'var(--card)',
@@ -48,14 +48,22 @@ export default function WorkSection() {
 
               {/* Visual */}
               <div className="w-full aspect-video relative overflow-hidden">
-                <div
-                  className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.06]"
-                  style={{ background: project.gradient }}
-                >
-                  <span className="font-headline text-[100px] opacity-[.07] tracking-tight" style={{ color: 'var(--white)' }}>
-                    {project.monogram}
-                  </span>
-                </div>
+                {project.thumbnail ? (
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.06]"
+                    style={{ background: project.gradient }}
+                  >
+                    <span className="font-headline text-[100px] opacity-[.07] tracking-tight" style={{ color: 'var(--white)' }}>
+                      {project.monogram}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 35%, var(--card) 100%)' }} />
               </div>
 

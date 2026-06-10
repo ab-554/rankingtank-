@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg-scooperz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgb(4,16,13)" />
+      <stop offset="100%" stop-color="rgb(9,30,24)" />
+    </linearGradient>
+    <linearGradient id="overlay-scooperz" x1="0%" y1="50%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(4,6,13,0)" />
+      <stop offset="100%" stop-color="rgba(4,6,13,.85)" />
+    </linearGradient>
+    <linearGradient id="glow-scooperz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,224,255,.15)" />
+      <stop offset="100%" stop-color="rgba(0,224,255,0)" />
+    </linearGradient>
+    <filter id="noise-scooperz">
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="noisy"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg-scooperz)"/>
+
+  <!-- Subtle noise overlay -->
+  <rect width="1200" height="675" fill="rgba(0,0,0,.02)" filter="url(#noise-scooperz)"/>
+
+  <!-- Glow accent top-right -->
+  <circle cx="900" cy="100" r="300" fill="url(#glow-scooperz)"/>
+
+  <!-- Bottom gradient overlay -->
+  <rect width="1200" height="675" fill="url(#overlay-scooperz)"/>
+
+  <!-- Decorative grid dots -->
+  <g fill="rgba(56,152,255,.06)" transform="translate(60,60)">
+    <circle cx="0" cy="0" r="2"/><circle cx="60" cy="0" r="2"/>
+    <circle cx="120" cy="0" r="2"/><circle cx="180" cy="0" r="2"/>
+    <circle cx="240" cy="0" r="2"/><circle cx="300" cy="0" r="2"/>
+    <circle cx="0" cy="60" r="2"/><circle cx="60" cy="60" r="2"/>
+    <circle cx="120" cy="60" r="2"/><circle cx="180" cy="60" r="2"/>
+    <circle cx="0" cy="120" r="2"/><circle cx="60" cy="120" r="2"/>
+  </g>
+
+  <!-- Large monogram watermark -->
+  <text x="180" y="520" font-family="'Bebas Neue',sans-serif" font-size="420" fill="rgba(255,255,255,.03)" font-weight="400" letter-spacing="-2">SC</text>
+
+  <!-- Tag badge -->
+  <rect x="80" y="440" width="100" height="30" rx="15" fill="rgba(0,224,255,.12)" stroke="rgba(0,224,255,.3)" stroke-width="1"/>
+  <text x="130" y="460" font-family="'Outfit',sans-serif" font-size="11" fill="#00e0ff" text-anchor="middle" font-weight="600" letter-spacing="2">INFLUENCER MARKETING</text>
+
+  <!-- Project title -->
+  <text x="80" y="528" font-family="'Syne',sans-serif" font-size="64" fill="#edf3ff" font-weight="800" letter-spacing="-1">Scooperz</text>
+
+  <!-- Portfolio attribution -->
+  <text x="80" y="610" font-family="'Outfit',sans-serif" font-size="14" fill="#8b9ab5" font-weight="300" letter-spacing="2">ABDUL BASIT A. — PORTFOLIO</text>
+
+  <!-- Corner decorative line -->
+  <line x1="80" y1="565" x2="180" y2="565" stroke="rgba(0,224,255,.3)" stroke-width="2"/>
+</svg>

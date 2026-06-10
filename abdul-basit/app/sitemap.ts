@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllProjectSlugs, getAllInsightSlugs } from '@/lib/sanity/queries';
+import { getAllProjectSlugs, getAllInsightSlugs } from '@/lib/data';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://rankingtank.com';
