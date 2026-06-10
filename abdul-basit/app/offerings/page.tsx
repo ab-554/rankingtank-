@@ -7,7 +7,7 @@ import CtaBanner from '@/components/ui/CtaBanner';
 export const metadata: Metadata = {
   title: 'Offerings',
   description:
-    'Explore our digital services: platform development, precision SEO, AI & automation, and technical consulting.',
+    'RankingTank services: scalable web platforms, precision SEO, AI automation, and technical consulting — built for real business impact.',
 };
 
 const services = [
@@ -62,9 +62,9 @@ const services = [
 ];
 
 const stats = [
-  { value: '150+', label: 'Platforms Launched' },
-  { value: '10x',  label: 'Traffic Multiplier' },
-  { value: '10K',  label: 'Hours Saved in Automation' },
+  { value: '50+', label: 'Platforms Launched' },
+  { value: '10x',  label: 'Avg. Traffic Growth' },
+  { value: '5K+',  label: 'Hours Saved via Automation' },
   { value: '0',    label: 'Compromises' },
 ];
 
@@ -75,7 +75,7 @@ export default function OfferingsPage() {
         eyebrow="Offerings"
         title="SERVICES &"
         titleAccent="CAPABILITIES"
-        subtitle="End-to-end digital mastery. From scalable platforms to surgical SEO campaigns, we build architectures of growth."
+        subtitle="End-to-end digital mastery. From scalable web platforms to surgical SEO, I build architectures of growth — solo, fast, and without compromise."
       />
 
       {/* Services Grid */}

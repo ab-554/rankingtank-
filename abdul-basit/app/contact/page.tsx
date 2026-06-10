@@ -6,13 +6,8 @@ import RevealWrapper from '@/components/ui/RevealWrapper';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Abdul Basit A. for your next digital project. Offices in Roosendaal and The Hague, Netherlands.',
+    'Get in touch with RankingTank for your next web development, SEO, or AI automation project. Pakistan-based, serving clients worldwide.',
 };
-
-const offices = [
-  { name: 'Roosendaal (HQ)',  address: 'Aanwas 35, 4704 SC',         phone: '+31 85 021 11 21', tel: '+31850211121' },
-  { name: 'The Hague (HUB)',  address: 'Binckhorstlaan 36, 2516 BE',  phone: '+31 70 207 15 79', tel: '+31702071579' },
-];
 
 export default function ContactPage() {
   return (
@@ -36,40 +31,48 @@ export default function ContactPage() {
             Get in Touch
           </h2>
           <p className="text-sm leading-7 mb-10" style={{ color: 'var(--silver)' }}>
-            Whether it&apos;s a scalable system, precision SEO campaign, or AI automation, we&apos;re ready to architect your next phase of growth.
+            Whether it&apos;s a scalable web system, precision SEO campaign, or AI automation pipeline, I&apos;m ready to architect your next phase of growth — from Pakistan, for the world.
           </p>
 
           <div className="flex flex-col gap-5 mb-10">
-            {offices.map(o => (
-              <div
-                key={o.name}
-                className="rounded-2xl p-6"
-                style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-              >
-                <div className="font-display font-bold text-base mb-1">{o.name}</div>
-                <p className="text-sm mb-3" style={{ color: 'var(--silver)' }}>{o.address}</p>
-                <a
-                  href={`tel:${o.tel}`}
-                  className="text-sm font-bold no-underline"
-                  style={{ color: 'var(--blue)' }}
-                >
-                  {o.phone}
-                </a>
-              </div>
-            ))}
-
+            {/* Email */}
             <div
               className="rounded-2xl p-6"
               style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
             >
-              <div className="font-display font-bold text-base mb-1">Direct Email</div>
+              <div className="font-display font-bold text-base mb-1">Email</div>
               <a
-                href="mailto:hello@abdulbasit.nl"
+                href="mailto:hello@rankingtank.com"
                 className="text-sm font-bold no-underline"
                 style={{ color: 'var(--blue)' }}
               >
-                hello@abdulbasit.nl
+                hello@rankingtank.com
               </a>
+            </div>
+
+            {/* WhatsApp */}
+            <div
+              className="rounded-2xl p-6"
+              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+            >
+              <div className="font-display font-bold text-base mb-1">WhatsApp</div>
+              <a
+                href="https://wa.me/923001234567"
+                className="text-sm font-bold no-underline"
+                style={{ color: 'var(--blue)' }}
+              >
+                +92 300 123 4567
+              </a>
+            </div>
+
+            {/* Location */}
+            <div
+              className="rounded-2xl p-6"
+              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+            >
+              <div className="font-display font-bold text-base mb-1">Location</div>
+              <p className="text-sm mb-1" style={{ color: 'var(--silver)' }}>Pakistan &mdash; Serving clients worldwide</p>
+              <p className="text-sm" style={{ color: 'var(--muted)' }}>Response within 24 hours</p>
             </div>
           </div>
 

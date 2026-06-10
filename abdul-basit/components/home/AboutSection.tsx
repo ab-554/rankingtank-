@@ -18,10 +18,10 @@ export default function AboutSection() {
           Building digital systems that <span style={{ color: 'var(--blue)' }}>outlast trends</span> &amp; outperform competition.
         </h2>
         <p className="text-[15px] leading-[1.8] mb-3.5" style={{ color: 'var(--silver)' }}>
-          I am a digital powerhouse for platforms and AI. My team develops digital infrastructure that accelerates your business and maximises impact across your market.
+          I am a Pakistan-based freelance web developer and SEO operator. I build digital infrastructure that accelerates your business and maximises organic reach across competitive markets.
         </p>
         <p className="text-[15px] leading-[1.8] mb-3.5" style={{ color: 'var(--silver)' }}>
-          A crew of digital natives across strategy, development, creative, and marketing — working from strong partnerships, AI-first, with zero compromise.
+          Precision SEO, scalable web systems, and AI automation — delivered with zero compromise, deep technical expertise, and a singular focus on measurable growth.
         </p>
         <div className="flex gap-3 mt-8 flex-wrap">
           <Link href="/contact" className="btn btn-p btn-sm">Work with me →</Link>

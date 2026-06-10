@@ -43,7 +43,7 @@ export default function Nav() {
           className="font-display text-[17px] font-extrabold tracking-tight no-underline flex items-center gap-[10px]"
           style={{ color: 'var(--white)' }}
         >
-          Abdul Basit <span style={{ color: 'var(--blue)' }}>&nbsp;A.</span>
+          Ranking<span style={{ color: 'var(--blue)' }}>Tank</span>
         </Link>
 
         {/* Center nav — hidden below 1100px */}

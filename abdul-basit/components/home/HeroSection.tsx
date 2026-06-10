@@ -70,7 +70,7 @@ export default function HeroSection() {
               animation: 'pulse 2s ease-in-out infinite',
             }}
           />
-          Creative Digital Agency · Roosendaal &amp; The Hague
+          Freelance Web Developer &amp; SEO Operator · Pakistan
         </div>
 
         <div className="flex flex-col gap-1.5">
@@ -110,7 +110,7 @@ export default function HeroSection() {
           <div className="w-1 h-1 rounded-full" style={{ background: 'var(--blue)' }} />
           Available for projects
           <div className="w-1 h-1 rounded-full" style={{ background: 'var(--blue)' }} />
-          Roosendaal &amp; The Hague
+          Worldwide · Remote
         </div>
         <div className="flex items-center gap-2.5 mt-2 text-[10px] tracking-[.12em] uppercase" style={{ color: 'var(--muted)' }}>
           <div

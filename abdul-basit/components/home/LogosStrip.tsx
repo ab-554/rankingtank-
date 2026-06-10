@@ -1,7 +1,7 @@
 const logos = [
-  'Viscon', 'Groenhuysen', 'Automotions', 'Dokter.nl',
-  'Ministry of Interior', 'MKB Brandstof', 'Mason Garments',
-  'Municipality Breda', 'Municipality Roosendaal', 'Audi',
+  'Next.js', 'Sanity', 'Shopify', 'OpenAI',
+  'Vercel', 'n8n', 'Tailwind', 'Framer',
+  'Google Search', 'Ahrefs',
 ];
 
 export default function LogosStrip() {

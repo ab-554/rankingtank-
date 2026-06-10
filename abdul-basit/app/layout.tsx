@@ -29,19 +29,19 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Abdul Basit A. — Web Systems · Precision SEO',
-    template: '%s | Abdul Basit A.',
+    default: 'RankingTank \u2014 Web Systems \u00b7 Precision SEO',
+    template: '%s | RankingTank',
   },
   description:
-    'Creative digital agency building scalable web systems, precision SEO, and AI solutions. Based in Roosendaal & The Hague, Netherlands.',
-  metadataBase: new URL('https://abdulbasit.nl'),
+    'Pakistan-based freelance web developer and SEO operator building scalable web systems, precision SEO, and AI automation that drive real results.',
+  metadataBase: new URL('https://rankingtank.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Abdul Basit A.',
-    title: 'Abdul Basit A. — Web Systems · Precision SEO',
+    siteName: 'RankingTank',
+    title: 'RankingTank \u2014 Web Systems \u00b7 Precision SEO',
     description:
-      'Creative digital agency building scalable web systems, precision SEO, and AI solutions.',
+      'Scalable web systems, precision SEO, and AI automation \u2014 built to dominate markets.',
   },
   twitter: {
     card: 'summary_large_image',

@@ -7,7 +7,7 @@ import QuoteRunner from '@/components/home/QuoteRunner';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn about Abdul Basit A. — the mind behind scalable web systems and precision SEO strategies based in Roosendaal & The Hague.',
+  description: 'Learn about RankingTank — Pakistan-based freelance web developer and SEO operator specialising in scalable web systems, precision SEO, and AI automation.',
 };
 
 const steps = [
@@ -21,10 +21,10 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Abdul Basit A."
+        eyebrow="About RankingTank"
         title="THE MIND BEHIND"
         titleAccent="THE SYSTEM"
-        subtitle="I engineer digital growth. Period. With years of experience leading technically complex projects, I don't just build websites — I architect platforms that dominate markets."
+        subtitle="I engineer digital growth — from Pakistan, for the world. With deep expertise in technical SEO, Next.js development, and AI automation, I don't just build websites — I architect platforms that dominate markets."
       />
 
       {/* Philosophy */}
@@ -35,10 +35,10 @@ export default function AboutPage() {
             Building digital systems that <span style={{ color: 'var(--blue)' }}>outlast trends</span> &amp; outperform competition.
           </h2>
           <p className="text-[15px] leading-[1.8] mb-3.5" style={{ color: 'var(--silver)' }}>
-            I am a digital powerhouse for platforms and AI. My team develops digital infrastructure that accelerates your business and maximises impact across your market.
+            I am a Pakistan-based freelance web developer and SEO operator. I build digital infrastructure that accelerates your business and maximises organic reach across competitive markets.
           </p>
           <p className="text-[15px] leading-[1.8]" style={{ color: 'var(--silver)' }}>
-            A crew of digital natives across strategy, development, creative, and marketing — working from strong partnerships, AI-first, with zero compromise.
+            Precision SEO, scalable web systems, and AI automation — delivered with zero compromise, deep technical expertise, and a singular focus on measurable growth.
           </p>
         </RevealWrapper>
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://abdulbasit.nl/sitemap.xml',
+    sitemap: 'https://rankingtank.com/sitemap.xml',
   };
 }

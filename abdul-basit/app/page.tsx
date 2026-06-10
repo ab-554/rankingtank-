@@ -11,10 +11,10 @@ import CultureSection from '@/components/home/CultureSection';
 import CtaBanner from '@/components/ui/CtaBanner';
 
 const stats = [
-  { value: '20+', label: 'Years Active' },
-  { value: '150+', label: 'Projects Delivered' },
-  { value: '98%', label: 'Client Retention' },
-  { value: '2', label: 'Offices in NL' },
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '10x', label: 'Avg. Traffic Growth' },
+  { value: '100%', label: 'Client Retention' },
+  { value: '0', label: 'Compromises' },
 ];
 
 export default function HomePage() {

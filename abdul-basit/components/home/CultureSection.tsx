@@ -2,10 +2,10 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 
 const values = [
-  { icon: '🎤', title: 'Abdul Basit A. Talks', desc: 'Industry events, keynotes, and knowledge sessions — open to the wider digital community.' },
-  { icon: '🏅', title: 'Awards & Recognition', desc: 'Proud partners of Dutch Design Awards, Google Partners, and Just Diggit — recognised for excellence.' },
-  { icon: '🤝', title: 'Strong Partnerships', desc: 'Long-term relationships rooted in mutual ambition and shared success — not just projects.' },
-  { icon: '🚀', title: 'AI-First Mindset', desc: "Constantly experimenting with what's next so clients always benefit from the cutting edge." },
+  { icon: '🎯', title: 'Precision-First SEO', desc: 'Every ranking decision is data-driven. No guesswork — just technical depth, keyword intent, and relentless iteration.' },
+  { icon: '🤖', title: 'AI-Native Automation', desc: 'From n8n pipelines to OpenAI integrations, I build systems that work while you sleep — scaling your output without scaling headcount.' },
+  { icon: '💪', title: 'Solo, High-Leverage Output', desc: 'You work directly with me — no account managers, no overhead. Pure execution from the person who knows your project inside out.' },
+  { icon: '🚀', title: 'Zero Compromise Delivery', desc: 'Fast, clean, scalable code and measurable SEO results. Every project is treated as if my own business depends on it — because it does.' },
 ];
 
 export default function CultureSection() {

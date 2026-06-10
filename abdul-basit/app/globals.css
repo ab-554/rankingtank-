@@ -53,19 +53,21 @@
 /* ═══════════════════════════════════════
    BASE RESET
 ═══════════════════════════════════════ */
-*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
-  cursor: none;
-}
-@media (pointer: coarse) {
-  body { cursor: auto; }
+@layer base {
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  @media (pointer: coarse) {
+    body { cursor: auto; }
+  }
 }
 
 /* ═══════════════════════════════════════

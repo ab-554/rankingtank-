@@ -1,12 +1,12 @@
 const items = [
-  'Recruitment Platform — ENGNR',
-  'B2B E-Commerce — ACM Products',
-  'Performance Marketing — Q1905 / Quick',
-  'Behavior Change Campaign — Municipality Breda',
-  'Corporate Website & Configurator — HBC',
-  'Strategic Client Journey — Koppert Cress',
-  'Lead Generation — FiscFree',
-  'Digital Landscape — Damen Technical',
+  'E-Commerce Platform — Precision SEO',
+  'AI Automation Pipeline — Lead Generation',
+  'Technical SEO Audit — 10x Organic Traffic',
+  'Custom Web App — B2B SaaS',
+  'Content Strategy — Authority Building',
+  'Next.js Platform — Sub-1s Load Time',
+  'Link Building Campaign — Domain Authority',
+  'Workflow Automation — n8n & OpenAI',
 ];
 
 export default function Ticker() {
