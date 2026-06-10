@@ -1,0 +1,18 @@
+﻿Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 6.1s
+  Running TypeScript ...
+Failed to type check.
+System.Management.Automation.RemoteException
+./lib/sanity/image.ts:3:40
+Type error: Cannot find module '@sanity/image-url/lib/types/types' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+  1 | import imageUrlBuilder from '@sanity/image-url';
+  2 | import { sanityClient } from './client';
+> 3 | import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+    |                                        ^
+  4 |
+  5 | const builder = imageUrlBuilder(sanityClient);
+  6 |
+Next.js build worker exited with code: 1 and signal: null
