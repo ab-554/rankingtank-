@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/offerings', label: 'Offerings' },
+  { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
   { href: '/insights', label: 'Insights' },
@@ -40,10 +40,11 @@ export default function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-display text-[17px] font-extrabold tracking-tight no-underline flex items-center gap-[10px]"
+          className="no-underline flex items-center gap-[10px]"
           style={{ color: 'var(--white)' }}
         >
-          Ranking<span style={{ color: 'var(--blue)' }}>Tank</span>
+          <img src="/logo-monogram.svg" alt="RT" width="32" height="32" className="shrink-0" />
+          <img src="/logo-wordmark.svg" alt="RankingTank" width="120" height="28" className="hidden sm:block" />
         </Link>
 
         {/* Center nav — hidden below 1100px */}

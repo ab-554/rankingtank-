@@ -70,7 +70,7 @@ export default function HeroSection() {
               animation: 'pulse 2s ease-in-out infinite',
             }}
           />
-          Freelance Web Developer &amp; SEO Operator · Pakistan
+          Freelance Web Developer &amp; SEO Operator
         </div>
 
         <div className="flex flex-col gap-1.5">

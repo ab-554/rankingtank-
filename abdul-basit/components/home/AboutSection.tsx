@@ -18,7 +18,7 @@ export default function AboutSection() {
           Building digital systems that <span style={{ color: 'var(--blue)' }}>outlast trends</span> &amp; outperform competition.
         </h2>
         <p className="text-[15px] leading-[1.8] mb-3.5" style={{ color: 'var(--silver)' }}>
-          I am a Pakistan-based freelance web developer and SEO operator. I build digital infrastructure that accelerates your business and maximises organic reach across competitive markets.
+          I am a freelance web developer and SEO operator. I build digital infrastructure that accelerates your business and maximises organic reach across competitive markets.
         </p>
         <p className="text-[15px] leading-[1.8] mb-3.5" style={{ color: 'var(--silver)' }}>
           Precision SEO, scalable web systems, and AI automation — delivered with zero compromise, deep technical expertise, and a singular focus on measurable growth.

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="mono-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3898ff" />
+      <stop offset="100%" stop-color="#00e0ff" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="8" fill="rgba(56,152,255,.1)" stroke="rgba(56,152,255,.25)" stroke-width="1.5"/>
+  <text x="20" y="27" font-family="'Syne','Arial Black',sans-serif" font-size="20" font-weight="800" fill="url(#mono-grad)" text-anchor="middle">RT</text>
+</svg>

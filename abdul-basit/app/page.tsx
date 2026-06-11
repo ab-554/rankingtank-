@@ -2,7 +2,7 @@ import HeroSection from '@/components/home/HeroSection';
 import ChipsRow from '@/components/home/ChipsRow';
 import ImageStrip from '@/components/home/ImageStrip';
 import LogosStrip from '@/components/home/LogosStrip';
-import ServicesSection from '@/components/home/ServicesSection';
+import ServicesStack from '@/components/home/ServicesStack';
 import StatsRow from '@/components/ui/StatsRow';
 import QuoteRunner from '@/components/home/QuoteRunner';
 import AboutSection from '@/components/home/AboutSection';
@@ -25,8 +25,9 @@ export default function HomePage() {
       <ImageStrip />
       <LogosStrip />
 
+      <ServicesStack />
+
       <section className="py-[120px] px-[60px] max-lg:px-6">
-        <ServicesSection />
         <StatsRow stats={stats} />
       </section>
 

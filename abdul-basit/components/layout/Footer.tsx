@@ -22,11 +22,12 @@ export default function Footer() {
       <div className="grid grid-cols-[1.8fr_1fr_1fr_1.2fr] gap-12 mb-14 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {/* Brand */}
         <div>
-          <div className="font-display text-[22px] font-extrabold tracking-tight mb-3.5" style={{ color: 'var(--white)' }}>
-            Ranking<span style={{ color: 'var(--blue)' }}>Tank</span><sup className="text-[10px]" style={{ color: 'var(--blue)' }}>®</sup>
-          </div>
+          <Link href="/" className="no-underline inline-flex items-center gap-[10px] mb-3.5">
+            <img src="/logo-monogram.svg" alt="RT" width="32" height="32" className="shrink-0" />
+            <img src="/logo-wordmark.svg" alt="RankingTank" width="120" height="28" />
+          </Link>
           <p className="text-sm leading-7 max-w-[240px] mb-6" style={{ color: 'var(--muted)' }}>
-            Pakistan-based freelance web developer and SEO operator building scalable web systems, precision SEO, and AI automation.
+            Freelance web developer and SEO operator building scalable web systems, precision SEO, and AI automation.
           </p>
           <div className="flex flex-col gap-[7px]">
             <a href="mailto:hello@rankingtank.com" className="text-[13px] font-semibold no-underline transition-colors duration-250" style={{ color: 'var(--silver)' }}>hello@rankingtank.com</a>
@@ -64,10 +65,10 @@ export default function Footer() {
 
         {/* Location */}
         <div>
-          <div className="font-display text-[10px] font-bold tracking-[.14em] uppercase mb-[18px]" style={{ color: 'var(--muted)' }}>Location</div>
+          <div className="font-display text-[10px] font-bold tracking-[.14em] uppercase mb-[18px]" style={{ color: 'var(--muted)' }}>Remote</div>
           <div className="text-[13px] leading-7 mb-[18px]" style={{ color: 'var(--muted)' }}>
-            <strong className="block font-semibold mb-[3px]" style={{ color: 'var(--silver)' }}>Pakistan (Remote)</strong>
-            Available worldwide<br />
+            <strong className="block font-semibold mb-[3px]" style={{ color: 'var(--silver)' }}>Remote · Worldwide</strong>
+            Available globally<br />
             <a href="mailto:hello@rankingtank.com" className="no-underline" style={{ color: 'var(--blue)' }}>hello@rankingtank.com</a>
           </div>
           <div className="text-[13px] leading-7" style={{ color: 'var(--muted)' }}>
