@@ -1,88 +1,186 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { projects } from '@/data/projects';
 import Link from 'next/link';
-import PageHero from '@/components/ui/PageHero';
-import RevealWrapper from '@/components/ui/RevealWrapper';
-import { getAllProjects } from '@/lib/data';
+import { motion } from 'framer-motion';
 
-export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Explore our portfolio of web systems, platforms, SEO campaigns, and AI automation projects that deliver measurable results.',
-};
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+} as const;
 
-const strips = [
-  { label: 'Platform Launch', gradient: 'linear-gradient(135deg,#04091e,#0c2248)' },
-  { label: 'Performance Marketing', gradient: 'linear-gradient(135deg,#030c14,#072030)' },
-  { label: 'Corporate Website', gradient: 'linear-gradient(135deg,#04100d,#091e18)' },
-  { label: 'Brand Identity', gradient: 'linear-gradient(135deg,#080414,#14082a)' },
-  { label: 'AI Automation', gradient: 'linear-gradient(135deg,#040b1c,#081a38)' },
-];
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+} as const;
 
 export default function ProjectsPage() {
-  const projects = getAllProjects();
-
   return (
     <>
-      <PageHero eyebrow="Cases & Work" title="PROVEN" titleAccent="IMPACT" />
+      {/* Hero */}
+      <section className="relative overflow-hidden pt-[200px] pb-[80px] flex items-start justify-center">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-noise" />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(56,152,255,.028) 1px, transparent 1px), linear-gradient(90deg, rgba(56,152,255,.028) 1px, transparent 1px)',
+              backgroundSize: '72px 72px',
+            }}
+          />
+          <div
+            className="absolute rounded-full"
+            style={{
+              width: '1000px',
+              height: '1000px',
+              background: 'radial-gradient(circle, rgba(56,152,255,.13) 0%, transparent 65%)',
+              top: '-300px',
+              right: '-200px',
+              animation: 'orb1 18s ease-in-out infinite alternate',
+            }}
+          />
+        </div>
+        <div className="relative z-2 max-w-[900px] mx-auto text-center px-6">
+          <div
+            className="inline-flex items-center gap-[10px] px-4 py-[7px] rounded-full text-[11px] font-bold tracking-[.12em] uppercase mb-9 opacity-0"
+            style={{
+              background: 'var(--blue-dim)',
+              border: '1px solid var(--border-hi)',
+              color: 'var(--blue-bright)',
+              animation: 'riseUp .7s .2s var(--ease-s) forwards',
+            }}
+          >
+            <div
+              className="w-1.5 h-1.5 rounded-full"
+              style={{
+                background: 'var(--blue)',
+                boxShadow: '0 0 8px var(--blue)',
+                animation: 'pulse 2s ease-in-out infinite',
+              }}
+            />
+            Portfolio
+          </div>
+          <h1
+            className="!mb-0"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(44px, 6vw, 90px)',
+              fontWeight: 800,
+              lineHeight: 1,
+              letterSpacing: '-.03em',
+              color: 'var(--white)',
+              animation: 'riseUp .8s .35s var(--ease-s) forwards',
+              opacity: 0,
+            }}
+          >
+            The Work.
+          </h1>
+        </div>
+      </section>
 
-      {/* Grid */}
-      <div className="py-[120px] px-[60px] max-lg:px-6" style={{ paddingTop: '40px' }}>
-        <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
-          {projects.map((project, i) => (
-            <RevealWrapper key={project._id} delay={i % 2 === 0 ? undefined : 'd2'}>
+      {/* Project cards */}
+      <motion.section
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-80px' }}
+        className="px-[60px] pb-[140px] max-lg:px-6"
+        style={{ marginTop: '-20px' }}
+      >
+        <div className="flex flex-col gap-5">
+          {projects.map((project) => (
+            <motion.div key={project.slug} variants={item}>
               <Link
                 href={`/projects/${project.slug}`}
-                className="block rounded-[20px] overflow-hidden no-underline relative transition-all duration-350 group hover:-translate-y-2"
-                style={{ background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--white)', cursor: 'none' }}
+                className="group block no-underline rounded-[20px] overflow-hidden transition-all duration-350 hover:-translate-y-1 relative card-shimmer"
+                style={{
+                  background: 'var(--card)',
+                  border: '1px solid var(--border)',
+                  color: 'var(--white)',
+                }}
               >
-                <div className="absolute top-5 right-5 w-9 h-9 rounded-full flex items-center justify-center text-[15px] opacity-0 translate-x-1.5 -translate-y-1.5 transition-all duration-300 z-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0" style={{ background: 'var(--blue-dim)', border: '1px solid var(--border-hi)', color: 'var(--blue)' }}>↗</div>
-                <div className="w-full aspect-video relative overflow-hidden">
-                  {project.thumbnail ? (
-                    <img
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
-                    />
-                  ) : (
+                <div className="flex max-md:flex-col">
+                  {/* Thumbnail — 200px wide on desktop */}
+                  <div
+                    className="relative shrink-0 overflow-hidden max-md:w-full max-md:aspect-video"
+                    style={{ width: '200px', minHeight: '200px' }}
+                  >
+                    {project.thumbnail ? (
+                      <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+                        style={{ position: 'absolute', inset: 0 }}
+                      />
+                    ) : (
+                      <div
+                        className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.06]"
+                        style={{ background: project.gradient }}
+                      >
+                        <span
+                          className="font-headline text-[80px] opacity-[.07] tracking-tight"
+                          style={{ color: 'var(--white)' }}
+                        >
+                          {project.title.charAt(0)}
+                        </span>
+                      </div>
+                    )}
                     <div
-                      className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.06]"
-                      style={{ background: project.gradient }}
-                    >
-                      <span className="font-headline text-[100px] opacity-[.07] tracking-tight" style={{ color: 'var(--white)' }}>{project.monogram}</span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 35%, var(--card) 100%)' }} />
-                </div>
-                <div className="p-6 pb-8 px-7">
-                  <div className="flex gap-[7px] flex-wrap mb-3.5">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="text-[10px] font-bold tracking-[.08em] uppercase px-[11px] py-[3px] rounded-full" style={{ color: 'var(--blue)', border: '1px solid var(--border-hi)', background: 'var(--blue-dim)' }}>{tag}</span>
-                    ))}
+                      className="absolute inset-0"
+                      style={{ background: 'linear-gradient(to right, transparent 50%, var(--card) 100%)' }}
+                    />
                   </div>
-                  <div className="font-display text-2xl font-extrabold tracking-tight mb-1">{project.title}</div>
-                  <div className="text-[13px] mb-4" style={{ color: 'var(--silver)' }}>{project.description}</div>
-                  <div className="font-display text-[13px] font-bold inline-flex items-center gap-[7px]" style={{ color: 'var(--cyan)' }}>
-                    <span style={{ color: 'var(--blue)' }}>→</span> {project.result}
+
+                  {/* Content */}
+                  <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                    {/* Tags */}
+                    <div className="flex gap-[7px] flex-wrap mb-3">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] font-bold tracking-[.08em] uppercase px-[11px] py-[3px] rounded-full"
+                          style={{
+                            color: 'var(--blue)',
+                            border: '1px solid var(--border-hi)',
+                            background: 'var(--blue-dim)',
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Title */}
+                    <h2
+                      className="font-display text-2xl font-extrabold tracking-tight mb-1"
+                      style={{ color: 'var(--white)' }}
+                    >
+                      {project.title}
+                    </h2>
+
+                    {/* Description */}
+                    <p className="text-[13px] mb-4" style={{ color: 'var(--silver)' }}>
+                      {project.description}
+                    </p>
+
+                    {/* CTA */}
+                    <div
+                      className="font-display text-[13px] font-bold inline-flex items-center gap-[7px] transition-all duration-250 group-hover:gap-3"
+                      style={{ color: 'var(--cyan)' }}
+                    >
+                      <span style={{ color: 'var(--blue)' }}>→</span> Read case study
+                    </div>
                   </div>
                 </div>
               </Link>
-            </RevealWrapper>
+            </motion.div>
           ))}
         </div>
-      </div>
-
-      {/* Strip */}
-      <div className="overflow-hidden mt-10 mb-[120px] pb-1">
-        <div className="flex gap-3.5 w-max hover:[animation-play-state:paused]" style={{ animation: 'strip 40s linear infinite' }}>
-          {[...strips, ...strips, ...strips].map((item, i) => (
-            <div key={i} className="w-[300px] h-[200px] rounded-[18px] shrink-0 overflow-hidden relative" style={{ border: '1px solid var(--border)' }}>
-              <div className="w-full h-full flex items-end p-[18px] relative" style={{ background: item.gradient }}>
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(4,6,13,.82) 0%, transparent 60%)' }} />
-                <span className="font-display text-[11px] font-bold z-2 tracking-[.06em] uppercase" style={{ color: 'rgba(255,255,255,.55)' }}>{item.label}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      </motion.section>
     </>
   );
 }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#04060d"/>
+  <rect x="0" y="0" width="1200" height="675" fill="url(#bg)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.4" r="0.7"><stop offset="0%" stop-color="#3898ff" stop-opacity="0.08"/><stop offset="100%" stop-color="#04060d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3898ff"/><stop offset="100%" stop-color="#00e0ff"/></linearGradient>
+  </defs>
+  <rect x="60" y="60" width="200" height="3" rx="1.5" fill="url(#g1)"/>
+  <text x="60" y="170" font-family="'Bebas Neue',Arial,sans-serif" font-size="48" fill="#edf3ff" letter-spacing="2">Dexign House</text>
+  <text x="60" y="198" font-family="'Bebas Neue',Arial,sans-serif" font-size="28" fill="#3898ff" letter-spacing="4">SEO · ARCHITECTURE</text>
+  <text x="60" y="268" font-family="Outfit,Arial,sans-serif" font-size="18" fill="#8b9ab5">Full SEO overhaul for an architecture</text>
+  <text x="60" y="298" font-family="Outfit,Arial,sans-serif" font-size="18" fill="#8b9ab5">&amp; interior design studio. On-page</text>
+  <text x="60" y="328" font-family="Outfit,Arial,sans-serif" font-size="18" fill="#8b9ab5">optimization and content strategy.</text>
+  <rect x="60" y="390" width="100" height="36" rx="18" fill="none" stroke="#3898ff" stroke-width="1"/>
+  <text x="110" y="414" font-family="Outfit,Arial,sans-serif" font-size="13" fill="#3898ff" text-anchor="middle">On-Page SEO</text>
+  <rect x="172" y="390" width="110" height="36" rx="18" fill="none" stroke="#3898ff" stroke-width="1"/>
+  <text x="227" y="414" font-family="Outfit,Arial,sans-serif" font-size="13" fill="#3898ff" text-anchor="middle">Content Strategy</text>
+  <text x="1140" y="630" font-family="'Bebas Neue',Arial,sans-serif" font-size="80" fill="#0c1020" text-anchor="end" letter-spacing="4">DH</text>
+</svg>

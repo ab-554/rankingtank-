@@ -1,68 +1,44 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function Cursor() {
-  const dotRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
+  const mouseX = useMotionValue(-100);
+  const mouseY = useMotionValue(-100);
+
+  const springX = useSpring(mouseX, { stiffness: 120, damping: 22, mass: 0.5 });
+  const springY = useSpring(mouseY, { stiffness: 120, damping: 22, mass: 0.5 });
 
   useEffect(() => {
-    const dot = dotRef.current;
-    const ring = ringRef.current;
-    if (!dot || !ring) return;
-
-    let mx = 0, my = 0, rx = 0, ry = 0;
-
-    const onMove = (e: MouseEvent) => {
-      mx = e.clientX;
-      my = e.clientY;
-      dot.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX - 20);
+      mouseY.set(e.clientY - 20);
     };
 
-    const loop = () => {
-      rx += (mx - rx - 17) * 0.11;
-      ry += (my - ry - 17) * 0.11;
-      ring.style.transform = `translate(${rx}px, ${ry}px)`;
-      requestAnimationFrame(loop);
-    };
-
-    document.addEventListener('mousemove', onMove);
-    const raf = requestAnimationFrame(loop);
-
-    return () => {
-      document.removeEventListener('mousemove', onMove);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
+    document.addEventListener('mousemove', handleMouseMove);
+    return () => document.removeEventListener('mousemove', handleMouseMove);
+  }, [mouseX, mouseY]);
 
   return (
     <>
-      <div
-        ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] mix-blend-screen transition-[width,height] duration-300"
-        style={{ background: 'var(--blue)' }}
-        id="cursor-dot"
-      />
-      <div
-        ref={ringRef}
-        className="fixed top-0 left-0 w-[34px] h-[34px] rounded-full pointer-events-none z-[9998] hidden md:block"
-        style={{
-          border: '1px solid rgba(56,152,255,.4)',
-          transition: 'width .35s var(--ease-s), height .35s var(--ease-s), border-color .35s',
-        }}
+      <motion.div
         id="cursor-ring"
+        className="fixed top-0 left-0 pointer-events-none z-[9998] hidden md:block"
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: '50%',
+          x: springX,
+          y: springY,
+          background: 'linear-gradient(135deg, #3898ff, #00e0ff)',
+          WebkitMask: 'radial-gradient(circle, transparent 11px, #000 12px)',
+          mask: 'radial-gradient(circle, transparent 11px, #000 12px)',
+        }}
       />
       <style>{`
-        @media (pointer: coarse) {
-          #cursor-dot, #cursor-ring { display: none !important; }
-        }
-        body:has(a:hover, button:hover) #cursor-dot {
-          width: 16px !important; height: 16px !important;
-          background: var(--cyan) !important;
-        }
-        body:has(a:hover, button:hover) #cursor-ring {
-          width: 52px !important; height: 52px !important;
-          border-color: var(--blue) !important;
+        @media (hover: none) and (pointer: coarse) {
+          #cursor-ring { display: none !important; }
         }
       `}</style>
     </>
