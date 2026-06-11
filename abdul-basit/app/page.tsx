@@ -1,4 +1,5 @@
 import HeroSection from '@/components/home/HeroSection';
+import ServicesStack from '@/components/home/ServicesStack';
 import WorkSection from '@/components/home/WorkSection';
 import StatsRow from '@/components/ui/StatsRow';
 import CtaBanner from '@/components/ui/CtaBanner';
@@ -16,26 +17,35 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+
+      {/* ── Services Stack (sticky cards) ── */}
+      <ServicesStack />
+
+      {/* ── Selected Work ── */}
+      <WorkSection />
+
+      {/* ── Stats ── */}
       <section className="py-[120px] px-[60px] max-lg:px-6 max-w-7xl mx-auto">
-        <WorkSection />
-        <div className="mt-24">
-          <StatsRow stats={stats} />
-        </div>
+        <StatsRow stats={stats} />
       </section>
+
+      {/* ── About ── */}
       <section className="py-[120px] px-[60px] max-lg:px-6 bg-[#080b15]">
         <div className="max-w-6xl mx-auto">
           <RevealWrapper>
             <Eyebrow>ABOUT</Eyebrow>
             <h2 className="font-heading font-bold text-[clamp(28px,4vw,48px)] text-[#edf3ff] leading-[1.15] mt-4 max-w-3xl">
-              Building digital systems that outlast trends{' '}
-              <span className="text-[#3898ff]">and outperform</span> competition.
+              Building AI systems and search infrastructure{' '}
+              <span className="text-[#3898ff]">that outperform</span> every quarter.
             </h2>
             <p className="text-[#8b9ab5] font-body text-lg mt-6 max-w-2xl leading-relaxed">
               I am a Pakistan-based freelance web developer and SEO operator. I build digital infrastructure
-              that accelerates your business and maximises organic reach across competitive markets.
+              that accelerates your business and maximises organic reach across competitive markets —
+              spanning AI agents, GEO, AEO, precision SEO, CMS/CRM systems, and end-to-end automation.
             </p>
             <p className="text-[#8b9ab5] font-body text-lg mt-4 max-w-2xl leading-relaxed">
-              Precision SEO, scalable web systems, and AI automation — delivered with zero compromise,
+              Every system is engineered to compound — modern architecture, AI-native workflows, and
+              search strategies that dominate both traditional engines and generative AI. Zero compromise,
               deep technical expertise, and a singular focus on measurable growth.
             </p>
             <div className="flex gap-4 mt-8 flex-wrap">
@@ -49,6 +59,7 @@ export default function HomePage() {
           </RevealWrapper>
         </div>
       </section>
+
       <CtaBanner />
     </>
   );

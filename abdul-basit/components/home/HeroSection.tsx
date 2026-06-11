@@ -1,16 +1,95 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+/* ─── Ambient particle grid ─── */
+function ParticleGrid() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let w = (canvas.width = window.innerWidth);
+    let h = (canvas.height = window.innerHeight);
+    const dots: { x: number; y: number; vx: number; vy: number; r: number; o: number }[] = [];
+    const count = Math.min(60, Math.floor((w * h) / 24000));
+
+    for (let i = 0; i < count; i++) {
+      dots.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 0.5,
+        o: Math.random() * 0.4 + 0.1,
+      });
+    }
+
+    let animId: number;
+    const animate = () => {
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < dots.length; i++) {
+        const d = dots[i];
+        d.x += d.vx;
+        d.y += d.vy;
+        if (d.x < 0 || d.x > w) d.vx *= -1;
+        if (d.y < 0 || d.y > h) d.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(56,152,255,${d.o})`;
+        ctx.fill();
+
+        /* Draw connections to nearby dots */
+        for (let j = i + 1; j < dots.length; j++) {
+          const dx = dots[i].x - dots[j].x;
+          const dy = dots[i].y - dots[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 140) {
+            ctx.beginPath();
+            ctx.moveTo(dots[i].x, dots[i].y);
+            ctx.lineTo(dots[j].x, dots[j].y);
+            ctx.strokeStyle = `rgba(56,152,255,${0.06 * (1 - dist / 140)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      animId = requestAnimationFrame(animate);
+    };
+    animate();
+
+    const resize = () => {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    };
+    window.addEventListener('resize', resize);
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener('resize', resize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="pointer-events-none absolute inset-0 z-[1]"
+      style={{ opacity: 0.6 }}
+    />
+  );
+}
+
+/* ─── Variants ─── */
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
   },
 };
 
@@ -60,6 +139,9 @@ export default function HeroSection() {
             backgroundSize: '72px 72px',
           }}
         />
+
+        {/* Ambient particle grid */}
+        <ParticleGrid />
 
         {/* Blue orb */}
         <div
@@ -121,7 +203,7 @@ export default function HeroSection() {
           className="font-display text-[clamp(36px,6vw,76px)] font-bold leading-[1.05] tracking-[-.02em]"
           style={{ color: '#edf3ff' }}
         >
-          I build web systems and SEO that compound.
+          I build web systems, AI, and search strategies that compound.
         </motion.h1>
 
         {/* Subtext */}
@@ -130,8 +212,10 @@ export default function HeroSection() {
           className="mt-5 max-w-2xl text-balance text-[15px] leading-[1.8] sm:text-base"
           style={{ color: '#8b9ab5' }}
         >
-          Full-stack engineering bureau. We audit what is broken, rebuild on a modern
-          stack, and hold the gains with ongoing technical SEO.
+          Full-stack engineering bureau specialising in AI systems, generative engine
+          optimisation (GEO), answer engine optimisation (AEO), precision SEO, custom
+          CMS/CRM architectures, and business automation. Every system engineered to
+          accelerate growth across every channel.
         </motion.p>
 
         {/* CTAs */}
